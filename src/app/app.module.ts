@@ -22,6 +22,7 @@ import { IngredientListComponent } from './ingredients/ingredient-list.component
 import { IngredientDetailComponent } from './ingredients/ingredient-detail.component';
 import { RecipeListComponent } from './recipes/recipe-list.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail.component';
+import { RecipeEditComponent } from './recipes/recipe-edit.component';
 import { NutritionFactsComponent } from './shared/components/nutrition-facts.component';
 import { DataTableComponent } from './shared/components/data-table.component';
 import { FilterBarComponent } from './shared/components/filter-bar.component';
@@ -60,7 +61,8 @@ const ROUTES: Routes = [
   { path: 'ingredients', component: IngredientListComponent },
   { path: 'ingredients/:ingredientId', component: IngredientDetailComponent },
   { path: 'recipes', component: RecipeListComponent },
-  { path: 'recipes/:recipeId', component: RecipeDetailComponent }
+  { path: 'recipes/:recipeId', component: RecipeDetailComponent },
+  { path: 'recipes/:recipeId/edit', component: RecipeEditComponent }
 ];
 
 @NgModule({
@@ -72,6 +74,7 @@ const ROUTES: Routes = [
     IngredientListComponent,
     RecipeListComponent,
     RecipeDetailComponent,
+    RecipeEditComponent,
     NutritionFactsComponent,
     DataTableComponent,
     FilterBarComponent,
