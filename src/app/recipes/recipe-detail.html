@@ -11,7 +11,7 @@
   <div class="row">
     <div class="col-12 col-sm-6 col-lg-7 col-xl-8 recipe-runway" *ngIf="recipe">
       <div class="recipe-actions">
-        <a href="javascript:void(0);">Edit Recipe <i class="material-icons">create</i></a>
+        <a [routerLink]="'/recipes/' + recipe.id + '/edit'">Edit Recipe <i class="material-icons">create</i></a>
       </div>
       <p>Test</p>
     </div>
