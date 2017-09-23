@@ -34,16 +34,11 @@
                     <div class="form-group">
                         <label for="instructions">Ingredients</label>
                         <tbody>
-                            <tr *ngFor="let x of recipe.ingredients">
-                                {{ x.name }}
-                                <td>{{ x.category }}</td>
-                                <td>{{ x.calories }}</td>
-                                <td>{{ x.totalCarbohydrate | unit : 'g' }}</td>
-                                <td>{{ x.totalFat | unit : 'g' }}</td>
-                                <td>{{ x.protein | unit: 'g' }}</td>
+                            <tr *ngFor="let ingredient of recipe.ingredients">
+                                <td>{{ ingredient.name }}</td>
+                                <td><input name="ingredient" [(ngModel)]="ingredient.quantity" value="{{ingredient.quantity}}"></td>
                             </tr>
                         </tbody>
-                        
                     </div>
                     <button type="submit" class="btn btn-primary">Save Recipe</button>
                     <!-- <button type="button" class="btn btn-danger float-right" (click)="deleteRecipe()">Delete Recipe</button> -->
